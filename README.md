@@ -1,2 +1,2 @@
-# d3_first_visualization
+# Assignment for Information Visualization
 First visualization using D3.js
