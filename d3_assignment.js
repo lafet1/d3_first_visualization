@@ -135,8 +135,8 @@ d3.csv("meteo.csv", function(d){
     window.focus();
     d3.select(window).on("keydown", function() {
         switch (d3.event.keyCode) {
-        case 37: year = Math.max(year0, year - 1); break;
-        case 39: year = Math.min(year1, year + 1); break;
+        case 37: year = Math.max(year0, parseInt(year) - 1); break;
+        case 39: year = Math.min(year1, parseInt(year) + 1); break;
         }
         update();
     });
