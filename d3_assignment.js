@@ -10,7 +10,7 @@ var tick_labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
                     'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 // scales of my axis
-var xScale = d3.scaleBand().range([0, width]).padding(0.4),
+var xScale = d3.scaleBand().range([0, width]).padding(0.15),
     yScale = d3.scaleLinear().range([height - 70, 0]);
 
 // grouping
@@ -123,6 +123,8 @@ d3.csv("meteo.csv", function(d){
         .attr("class", "bartext")
         .attr("text-anchor", "middle")
         .attr("fill", "black")
+        .attr('font-size', '14')
+        .attr("fill", 'rgba(0, 0, 0, 0.5)')
         .attr("x", function(d) {
             return xScale(d.key) + xScale.bandwidth() / 2;
         })
